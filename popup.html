@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clean URL Slug Generator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Clean URL Slug Generator</h1>
+      <p class="subtitle">Transform titles into SEO-friendly URL slugs</p>
+    </div>
+    
+    <div class="input-section">
+      <label for="inputString">INPUT STRING:</label>
+      <textarea id="inputString" placeholder="Article title, tutorial title or any web page title"></textarea>
+    </div>
+    
+    <div class="options-section">
+      <div class="option">
+        <input type="radio" id="dashSeparator" name="separator" value="dash" checked>
+        <label for="dashSeparator">Separate with dash (-)</label>
+      </div>
+      <div class="option">
+        <input type="radio" id="underscoreSeparator" name="separator" value="underscore">
+        <label for="underscoreSeparator">Separate with underscore (_)</label>
+      </div>
+      <div class="option">
+        <input type="checkbox" id="removeStopWords">
+        <label for="removeStopWords">Remove stop words</label>
+      </div>
+      <div class="option">
+        <input type="checkbox" id="removeNumbers">
+        <label for="removeNumbers">Remove numbers</label>
+      </div>
+    </div>
+    
+    <div class="actions">
+      <button id="slugifyBtn" class="btn primary-btn">
+        <i class="fas fa-link"></i> SLUGIFY
+      </button>
+      <div class="secondary-actions">
+        <button id="clearBtn" class="btn secondary-btn">
+          <i class="fas fa-trash"></i> CLEAR
+        </button>
+        <button id="resetBtn" class="btn secondary-btn">
+          <i class="fas fa-redo"></i> RESET
+        </button>
+      </div>
+    </div>
+    
+    <div class="output-section">
+      <label for="outputSlug">OUTPUT:</label>
+      <div class="output-container">
+        <input type="text" id="outputSlug" readonly placeholder="Clean URL slug">
+        <button id="copyBtn" class="copy-btn" title="Copy to clipboard">
+          <i class="fas fa-copy"></i>
+        </button>
+      </div>
+    </div>
+    
+    <div class="info-section">
+      <div class="info-toggle">
+        <i class="fas fa-info-circle"></i>
+        <span>What is a URL slug?</span>
+        <i class="fas fa-chevron-down toggle-icon"></i>
+      </div>
+      <div class="info-content hidden">
+        <p>A URL slug is the part that comes at the very end of a URL and is the exact address of a specific page on your website.</p>
+        <p>For example - in <code>https://example.com/clean-url-slug</code>, "<code>clean-url-slug</code>" is the slug.</p>
+        <p>Composing a short but descriptive slug for a URL of the web page can positively affect your page's SEO.</p>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <div class="attribution">
+        <p>Created by <a href="https://github.com/vulct174" target="_blank">vulct174</a></p>
+        <p><a href="mailto:vulct.it@gmail.com">vulct.it@gmail.com</a></p>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html> 

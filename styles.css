@@ -1,0 +1,248 @@
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --accent-color: #e74c3c;
+  --light-color: #ecf0f1;
+  --dark-color: #2c3e50;
+  --success-color: #2ecc71;
+  --warning-color: #f39c12;
+  --border-radius: 8px;
+  --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+body {
+  background-color: #f5f7fa;
+  color: var(--dark-color);
+}
+
+.container {
+  width: 480px;
+  padding: 20px;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.header h1 {
+  font-size: 22px;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #666;
+}
+
+.input-section, .output-section {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--dark-color);
+  font-size: 14px;
+}
+
+textarea, input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  font-size: 14px;
+  transition: var(--transition);
+  background-color: #fff;
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+}
+
+textarea:focus, input[type="text"]:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.options-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  accent-color: var(--secondary-color);
+  width: 16px;
+  height: 16px;
+}
+
+.actions {
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: var(--transition);
+}
+
+.primary-btn {
+  background-color: var(--secondary-color);
+  color: white;
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.primary-btn:hover {
+  background-color: #2980b9;
+}
+
+.secondary-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.secondary-btn {
+  background-color: #f1f1f1;
+  color: #666;
+  flex: 1;
+}
+
+.secondary-btn:hover {
+  background-color: #e1e1e1;
+}
+
+.output-container {
+  position: relative;
+}
+
+.output-container input {
+  padding-right: 40px;
+}
+
+.copy-btn {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  color: #666;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  transition: var(--transition);
+}
+
+.copy-btn:hover {
+  color: var(--secondary-color);
+  background-color: rgba(52, 152, 219, 0.1);
+}
+
+.info-section {
+  background-color: #f8f9fa;
+  border-radius: var(--border-radius);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.info-toggle {
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.info-toggle i:first-child {
+  color: var(--secondary-color);
+}
+
+.toggle-icon {
+  margin-left: auto;
+  transition: transform 0.3s ease;
+}
+
+.info-content {
+  padding: 15px;
+  border-top: 1px solid #eee;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.info-content p {
+  margin-bottom: 10px;
+}
+
+.info-content code {
+  background-color: #eee;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-family: monospace;
+  font-size: 13px;
+}
+
+.hidden {
+  display: none;
+}
+
+.footer {
+  font-size: 12px;
+  text-align: center;
+  color: #777;
+}
+
+.attribution a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
+
+/* Animation for copy success */
+@keyframes copySuccess {
+  0% { color: var(--secondary-color); }
+  100% { color: var(--success-color); }
+}
+
+.copy-success {
+  animation: copySuccess 1s ease;
+  color: var(--success-color);
+} 
