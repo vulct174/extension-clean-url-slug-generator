@@ -6,6 +6,10 @@ A professional Chrome extension that helps you generate clean, SEO-friendly URL 
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-v1.0.0-blue)
 
+## 📸 Screenshot
+
+![Clean URL Slug Generator Screenshot](assets/screenshot.png)
+
 ## 🌟 Features
 
 - **Smart Slug Generation**: Convert any text into URL-friendly slugs
@@ -54,6 +58,8 @@ clean-url-slug-generator/
 ├── popup.html        # Extension popup interface
 ├── popup.js          # Main functionality
 ├── styles.css        # Styling
+├── assets/          # Images and media files
+│   └── screenshot.png
 ├── icons/            # Extension icons
 │   ├── icon16.png
 │   ├── icon48.png
